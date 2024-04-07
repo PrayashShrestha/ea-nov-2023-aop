@@ -1,0 +1,13 @@
+services:
+
+  postgres:
+    container_name: mysql-spring
+    image: mysql
+    environment:
+      MYSQL_USER: spring
+      MYSQL_PASSWORD: spring
+      MYSQL_DATABASE: spring_lab
+      MYSQL_ROOT_PASSWORD: secret
+    ports:
+      - 3306:3306
+    restart: unless-stopped
